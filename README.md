@@ -5,5 +5,10 @@ Description: Repository to hold all material relevant to midwestern states 3013 
 
 #### Email: zachkingcade@gmail.com
 
-Your image
-Slack / Github avatar
+##### My Image:
+
+<img src="my_face.jpg" width="300">
+
+##### My Avatar:
+
+<img src="tux-root.png" width="300">
