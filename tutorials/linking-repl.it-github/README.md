@@ -27,6 +27,3 @@ language = "cpp"
 run = "g++ main.cpp -o main"
 ```
 Note: all language will have diffrent command to run and diffrent parameters to set so please don't just copy mine. Get someone to help you or google it, I promise it will save you alot of headache.
-
-# Linking Github back to repl.it
-In a markdown file, generally in the README, you can link github to repl.it so that a person can run and test the code within your repository by simply clicking a button. This does first require you to have made and linked the repository to a repl. Once that is done simply add to the markdown file the following tag switching out the needed information "[![Run on Repl.it](https://repl.it/badge/github/account/repl name)](https://repl.it/github/account/repl name)" OR you can 
