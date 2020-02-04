@@ -10,8 +10,6 @@ using namespace std;
 int theSearch(vector<string> v, string key);
 
 int main(){
-    srand(time(NULL));
-    cout << "Flush" << endl;
     Timer T;
     T.Start();
     JsonFacade J("dict_w_defs.json");   // create instance of json class
