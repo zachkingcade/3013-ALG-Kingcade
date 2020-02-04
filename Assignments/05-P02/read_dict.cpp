@@ -2,11 +2,13 @@
 #include "JsonFacade.hpp"
 #include <time.h>
 #include <chrono> 
-#include "timer.hpp"
+#include "Timer.hpp"
 
 using namespace std;
 
 int main(){
+    srand(time(NULL));
+    cout << "Flush" << endl;
     Timer T;
     T.Start();
     JsonFacade J("dict_w_defs.json");   // create instance of json class
