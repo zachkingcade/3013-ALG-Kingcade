@@ -12,6 +12,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -146,7 +147,7 @@ public:
   */
   int Pop(){
     if(!Empty()){
-      if (top < size /2){
+      if (top < size /2 && size / 2 > 10){
           ContainerShrink();
       }  
       return A[top--];
@@ -295,22 +296,41 @@ public:
 // MAIN DRIVER
 // Simple Array Based Stack Usage:
 int main() {
-  ArrayStack stack;
-  int r = 0;
+  //---Veribles---
+  ArrayStack stack(10);   //Structure used to store and process our data with a starting size of 10
+  int item;               //used to store the read in number we are processing
+  int max = 10;            //Keeps track of the largest the stack has gotten
+  int changes = 0;        //Tracks the amount of times the size of the stack has changed
+  int previousSize = 10;  //Keeps track of the size the stack was the last time something was added or subtracted;
+  ifstream inFile;        //In file stream which we us to reasd in our data
 
-  for(int i=0;i<30;i++){
-    r = rand() % 100;
-    r = i+1;
-    cout << stack.checkSize() << ":" << stack.checkTop() <<":\t";
-    stack.Print();
-    if(!stack.Push(r)){
-      cout<<"Push failed"<<endl;
+  //open our data file
+  inFile.open("nums_test.dat");
+
+  while(inFile >> item){
+    if (item % 2 == 0){
+      //if item is even
+      stack.Push(item);
+      //if this is the largest the stack has been store current size
+      if(stack.checkSize() > previousSize){max = previousSize;}
+    } else {
+      //if item is odd
+      stack.Pop();
+    }
+    //check if the size of the stack has changed due to a push or pop
+    if (previousSize != stack.checkSize()){
+      changes++;
+      previousSize = stack.checkSize();
     }
   }
 
-  for(int i=0;i<25;i++){
-    cout << stack.checkSize() << ":" << stack.checkTop() <<":\t";
-    stack.Print();
-    stack.Pop();
-  }
+  //print our results
+  cout << "######################################################################\n\n";
+  cout << "   Assignment 4 - Resizing the Stack\n";
+  cout << "   CMPS 3013\n";
+  cout << "   Zachary Kingcade\n\n";
+  cout << "   Max Stack Size:\t" << max << '\n';
+  cout << "   End Stack Size:\t" << stack.checkSize() << '\n';
+  cout << "   Stack Resized:\t" << changes << " times\n\n";
+  cout << "######################################################################\n";
 }
