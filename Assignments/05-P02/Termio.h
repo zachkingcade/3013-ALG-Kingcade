@@ -71,6 +71,9 @@ inline string fuse(string left, string right, bool pad = false);
 /** Fuses multiple multi-line strings together for printing side-by-side. */
 inline string fuse(std::initializer_list<string> strings, bool pad = false);
 
+/** Fuses multiple multi-line strings together for printing side-by-side. */
+inline string fuse(std::vector<string> strings, bool pad = false);
+
 /** Split a string and store each new substring in a vector. */
 inline vector<string> split(string text, char delim, bool include = false);
 
@@ -210,12 +213,14 @@ public:
     inline IO &operator<<(Command &command);
 
     // input operations
-
-    inline IO &operator>>(string &str_var);
-    inline IO &operator>>(char *&str_var);
     /** Gets a single character from stdin. Input is unbuffered, echoless,
      * blocking. For non-blocking, use a separate thread. */
+    inline IO &operator>>(unsigned char &ch_var);
     inline IO &operator>>(char &ch_var);
+    /** Gets a single key from stdin (characters or arrow keys). Input is
+     * unbuffered, echoless, blocking. For non-blocking, use a separate
+     * thread. */
+    inline IO &operator>>(char *&str_var);
 
 private:
     ostream *out;
@@ -335,6 +340,30 @@ std::string Term::fuse(std::initializer_list<string> strings, bool pad)
     for (int i = 0; i < vstrings.size(); i++)
     {
         result = fuse(result, vstrings[i], pad);
+    }
+    return result;
+}
+
+/**
+ * Fuses multiple multi-line strings together for printing side-by-side.
+ * 
+ * I didn't think you could create a dynamic intializer list, so I just
+ * filled a vector with strings ....
+ * 
+ * @param strings a vector of strings ordered left to right
+ * 
+ * @param pad bool, whether to pad each line of the string to be the same width
+ */
+std::string Term::fuse(std::vector<string> strings, bool pad)
+{
+    // Variable for storing the resulting string
+    string result = "";
+    // Moving the initializer_list into a vector b/c I think they're easier
+
+    // Loop through all strings and fuse them
+    for (int i = 0; i < strings.size(); i++)
+    {
+        result = fuse(result, strings[i], pad);
     }
     return result;
 }
@@ -622,9 +651,13 @@ Term::IO::IO()
  * @param ch_var the variable to read a character into
  * @return this object (for chaining inputs)
  */
-Term::IO &Term::IO::operator>>(char &ch_var)
+Term::IO &Term::IO::operator>>(unsigned char &ch_var)
 {
 #if defined(WINDOWS)
+    // Setup Windows if we haven't yet.
+    if (!windows_setup)
+        setupWindows();
+
     // Keeps track of the console mode we started with
     DWORD mode;
     // Get the current mode so we can restore it later
@@ -632,7 +665,11 @@ Term::IO &Term::IO::operator>>(char &ch_var)
     // Set the console mode to unbuffered and echoless
     SetConsoleMode(stdin_terminal, 0);
 
-    ch_var = std::cin.get();
+    //ch_var = std::cin.get();
+    DWORD cc;
+    TCHAR c = 0;
+    ReadConsole(stdin_terminal, &c, 1, &cc, NULL);
+    ch_var = (unsigned char)c;
 
     // Restore the original console mode
     SetConsoleMode(stdin_terminal, mode);
@@ -645,6 +682,21 @@ Term::IO &Term::IO::operator>>(char &ch_var)
     // set the terminal back to buffered input and echo
     system("stty cooked echo");
 #endif
+    return *this;
+}
+
+/**
+ * Gets a single character from stdin.
+ * Input is unbuffered, echoless, blocking. For non-blocking, use a
+ * separate thread.
+ * @param ch_var the variable to read a character into 
+ * @return this object (for chaining inputs)
+ */
+Term::IO &Term::IO::operator>>(char &ch_var)
+{
+    unsigned char temp;
+    *this >> temp;
+    ch_var = (char)temp;
     return *this;
 }
 
@@ -739,6 +791,12 @@ Term::IO &Term::IO::operator<<(string text)
  */
 Term::IO &Term::IO::operator<<(const char &letter)
 {
+#if defined(WINDOWS)
+    // Setup Windows if we haven't yet.
+    if (!windows_setup)
+        setupWindows();
+#endif
+
     if (wide)
     {
         *wout << letter;
@@ -757,6 +815,12 @@ Term::IO &Term::IO::operator<<(const char &letter)
  */
 Term::IO &Term::IO::operator<<(const int &number)
 {
+#if defined(WINDOWS)
+    // Setup Windows if we haven't yet.
+    if (!windows_setup)
+        setupWindows();
+#endif
+
     if (wide)
     {
         *wout << number;
@@ -775,6 +839,12 @@ Term::IO &Term::IO::operator<<(const int &number)
  */
 Term::IO &Term::IO::operator<<(const double &number)
 {
+#if defined(WINDOWS)
+    // Setup Windows if we haven't yet.
+    if (!windows_setup)
+        setupWindows();
+#endif
+
     if (wide)
     {
         *wout << number;

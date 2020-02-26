@@ -1,0 +1,28 @@
+Time to load up linked-list|	Milliseconds: 8059	Seconds: 8.059144
+----------------------------------------------------------------------search: here
+Time to lookup here:	Milliseconds: 1	Seconds: 0.001543
+adhere adherence adherency adherent adherently adherer aerosphere allwhere anoplothere anticoherer 
+----------------------------------------------------------------------search: we
+Time to lookup we:	Milliseconds: 1	Seconds: 0.001308
+abawed advowee allowedly allower amorwe answer answerable answerableness answerably answerer 
+----------------------------------------------------------------------search: go
+Time to lookup go:	Milliseconds: 0	Seconds: 0.000555
+a-good aegophony aerugo aforegoing ago agog agoing agon agone agonic 
+----------------------------------------------------------------------search: on
+Time to lookup on:	Milliseconds: 0	Seconds: 0.000043
+-ation -ion -one aaronic aaronical abacination abaction abaddon abalienation abalone 
+----------------------------------------------------------------------search: a
+Time to lookup a:	Milliseconds: 0	Seconds: 0.000008
+-able -ably -ana -ance -ancy -ant -arch -ard -art -ate 
+----------------------------------------------------------------------search: magic
+Time to lookup magic:	Milliseconds: 38	Seconds: 0.038500
+magic magical magically magician --- --- --- --- --- --- 
+----------------------------------------------------------------------search: carpet
+Time to lookup carpet:	Milliseconds: 49	Seconds: 0.049141
+axminster carpet carpet carpetbag carpetbagger carpeting carpetless carpetmonger carpetway wilton carpet --- 
+----------------------------------------------------------------------search: ride
+Time to lookup ride:	Milliseconds: 2	Seconds: 0.002453
+alectorides anhydride arride asteridea astride aurochloride bestride bichloride boride borofluoride 
+----------------------------------------------------------------------search: ~
+Time to lookup ~:	Milliseconds: 40	Seconds: 0.040647
+--- --- --- --- --- --- --- --- --- --- 
