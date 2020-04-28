@@ -33,11 +33,11 @@ struct Node {
     Node *next;
     Node() {
         x = -1;
-        next = NULL;
+        next = nullptr;
     }
     Node(int n) {
         x = n;
-        next = NULL;
+        next = nullptr;
     }
 };
 
@@ -71,7 +71,7 @@ private:
 
 public:
     List() {
-        Head = Tail = NULL;
+        Head = Tail = nullptr;
         Size = 0;
     }
 
@@ -147,7 +147,7 @@ public:
         Node *Temp = Head;
         string list;
 
-        while (Temp != NULL) {
+        while (Temp != nullptr) {
             list += to_string(Temp->x) + "->";
             Temp = Temp->next;
         }
@@ -192,7 +192,7 @@ public:
         Node *Temp = Head;
 
         // Loop through local list and Push values onto new list
-        while (Temp != NULL) {
+        while (Temp != nullptr) {
             NewList.Push(Temp->x);
             Temp = Temp->next;
         }
@@ -201,7 +201,7 @@ public:
         Temp = Rhs.Head;
 
         // Same as above, loop and push
-        while (Temp != NULL) {
+        while (Temp != nullptr) {
             NewList.Push(Temp->x);
             Temp = Temp->next;
         }

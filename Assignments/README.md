@@ -1,5 +1,28 @@
-## Assignments
+## File Legend
 
-| Number | Folder | Description |
-| :----: | ------ | ----------- |
-|        |        |             |
+| Folder Name | Description |
+|:-----------|:-------------|
+|xx-**A**xx | This is some kind of an ***Assignment***, where an `assignment` can be anything that isn't big enough to be a full fledged program, and not specific enough to be a homework. |
+|xx-**H**xx | This is a ***Homework***. Something pretty specific, usually not requiring a lot of programming. |
+|xx-**P**xx | This is a ***Program***. Where is must be compile, run error free, commented, and correct. |
+|xx-**T**xx | This is a ***Test***. Usually when on github, it will start out as a study guide, then get accompanied with a solution after the exam. |
+
+## Student
+This is my work for the 3013 Algorithms class at Midwestern State University under [Doctor Griffin](https://github.com/rugbyprof). This template is a near match to his format used for delivery of work to the class
+however since it is on the students end due to stuff like cancelled assignments or changed work the table may look incomplete or have gaps in the lists numbers.
+
+## Assignments
+| Folder | Assignment | Description | Due|
+ | ------------|------------|------------|------------|
+ | [01-A01](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/01-A01) | [ Assignment 1 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/01-A01) | [ Getting Started](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/01-A01) | [01-23-2020 (Friday @ 5:00 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/01-A01) |
+ | [02-A02](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/02-A02) | [ Assignment 2 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/02-A02) | [ Commenting C++ Code](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/02-A02) | [01-27-2020 (Monday @ 3:30 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/02-A02) |
+ | [03-H01](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/03-H01) | [ Assignment 3 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/03-H01) | [ Banner Page](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/03-H01) | [01-29-2020 (Wednesday @ 3:30 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/03-H01) |
+ | [04-P01](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/04-P01) | [ Assignment 4 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/04-P01) | [ Resizing the Stack](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/04-P01) | [02-05-2020 (Wednesday @ 3:30 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/04-P01) |
+ | [05-P02](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/05-P02) | [ Assignment 5 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/05-P02) | [ Processing in Linear Time](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/05-P02) | [02-19-2020 (Wednesday @ 3:30 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/05-P02) |
+ | [08-T01](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/08-T01) | [ Test 1 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/08-T01) | [ Trees n Stuff](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/08-T01) | [03-02-2020 (Monday @ 3:30 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/08-T01) |
+ | [09-H03](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/09-H03) | [ Homework ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/09-H03) | [ Data Structures and Complexity](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/09-H03) | [03-13-2020 (Friday @ 3:30 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/09-H03) |
+ | [10-P04](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/10-P04) | [ Program 04 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/10-P04) | [ Graph Connectivity](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/10-P04) | [04-05-2020 (Sunday @ 11:59 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/10-P04) |
+ | [11-P05](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/11-P05) | [ Program 05 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/11-P05) | [ STL Maps](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/11-P05) | [04-05-2020 (Sunday @ 11:59 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/11-P05) |
+ | [12-P06](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/12-P06) | [ Program 06 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/12-P06) | [ Spanning Trees](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/12-P06) | [04-17-2020 (Friday @ 11:59 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/12-P06) |
+ | [13-P07](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/13-P07) | [ Program 07 ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/13-P07) | [ Shortest Path](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/13-P07) | [04-19-2020 (Sunday @ 11:59 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/13-P07) |
+ | [14-P08](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/14-P08) | [ Ferry Loading ](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/14-P08) | [ Problems 1,2,3](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/14-P08) | [04-27-2020 (Monday @ 11:59 p.m.)](https://github.com/zachkingcade/3013-ALG-Kingcade/tree/master/Assignments/14-P08) |
